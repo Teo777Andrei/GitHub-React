@@ -6,7 +6,9 @@ function Error({text}) {
     
     return (
         <div className = "card card-body mt-5">
-            <h4 className ="quicksand">{text}</h4>
+            <div id ="error" className ="text-center">
+                <h5 className ="quicksand">{text} form</h5>
+            </div>
         </div>
     )
     
