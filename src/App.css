@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+.user-image-custom{
+    
+    width:40%;
+    border-radius:50%;
+    
+}
+
+
+.quicksand{
+    font-family: "Quicksand";
+}   
+
+
+
+#spinner{
+    position:relative;
+    margin:auto;
+    display:block
+}
+
