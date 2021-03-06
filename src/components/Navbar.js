@@ -1,6 +1,7 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
 import {Link} from "react-router-dom"
+import githublogo from "./github-logo.svg"
 const Navbar = props =>{
     
     const styleAbout={
@@ -25,6 +26,7 @@ const Navbar = props =>{
     return(
         <nav className="nav-extended">
     <div className="nav-wrapper">
+      <img src= {githublogo}/>
       <h5 className="brand-logo quicksand">Github  Finder</h5>
       
       
