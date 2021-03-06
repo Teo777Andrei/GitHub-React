@@ -37,7 +37,9 @@ class UserForm extends Component {
                     <input   type ="text" value ={this.state.inputVal}
                     onChange ={this.onChange}/>
                     <br />
-                    <input  type = "submit" value ="Search" className ="btn btn-dark mt-4"/>
+                    <button color="white" type= "submit"  value ="Search" className ="btn waves-effect waves-light mt-4">
+                        Search
+                    </button>
                 </form>
                 {areCardsShown === true ? 
                 <button onClick ={deleteCards} className= "btn btn-dark mt-4 ">Erase users</button> : 
