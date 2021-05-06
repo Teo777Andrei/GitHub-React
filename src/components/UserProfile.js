@@ -35,23 +35,23 @@ export class UserProfile extends Component {
         
         this.setState({avatar:responseJson.avatar_url  , 
                       userName:responseJson.login ,
-                      location:JSON.stringify(responseJson.location),
-                      hireable:JSON.stringify(responseJson.hireable),
+                      location:String(responseJson.location),
+                      hireable:String(responseJson.hireable),
                       publicRepos:responseJson.public_repos  ,
                       userId:responseJson.id ,
                       gitHubLink:responseJson.html_url ,
                       following:responseJson.following ,
                       followers:responseJson.following ,
-                      company: responseJson.company ,
-                      email:responseJson.email  })
-        console.log(this.state.hireable  , this.state.location)
+                      company: String(responseJson.company),
+                      email:String(responseJson.email)  })
+        
     }
 
     render() {
         let quoteIndex = Math.floor(Math.random() * quotes.length)
         let quotedashIndex =quotes[quoteIndex].search(/-/)
 
-        console.log(this.props.userId)
+        
         return (
             <div className = "container-fluid">
                 <div className= "card card-body mt-4">
@@ -84,14 +84,14 @@ export class UserProfile extends Component {
                                 <li style={{border:"1px solid #99ccff"}} className="collection-header">
                                     <h5 className= "quicksand">Contents</h5>
                                 </li>
-                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">user id:{this.state.userId}</li>
-                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">location:{this.state.location}</li>
-                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">public repos:{this.state.publicRepos}</li>
-                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">hireable :{this.state.hireable}</li>
-                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">followers:{this.state.followers}</li>
-                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">following:{this.state.following}</li>
-                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">company:{this.state.company}</li>
-                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">email:{this.state.email}</li>
+                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">user id: {this.state.userId}</li>
+                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">location: {this.state.location}</li>
+                                <li style={{border:"1px solid #99ccff"}} className ="collection-item">public repos: {this.state.publicRepos}</li>
+                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">hireable : {this.state.hireable}</li>
+                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">followers: {this.state.followers}</li>
+                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">following: {this.state.following}</li>
+                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">company: {this.state.company}</li>
+                                <li style={{border:"1px solid #99ccff"}}className ="collection-item">email: {this.state.email}</li>
 
 
                             </ul>

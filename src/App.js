@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BrowserRouter as Router , Switch  , Route} from "react-router-dom"
+import {BrowserRouter as Router , Switch  , Route ,Link} from "react-router-dom"
 import React from "react"
 import Cards from "./components/Cards";
 import Navbar from "./components/Navbar"
@@ -73,8 +73,9 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
             <Navbar  title = "Github Finder" /> 
-            <Switch>
-              <Route exact  path ="/">
+              <Switch>
+              
+              <Route exact path="/" >
                 <div className = "container">
                 
                 <UserForm
@@ -83,6 +84,7 @@ class App extends React.Component {
                     fetchUsers={this.fetchUsers.bind(this)}
                     errorState= {this.state.errorState}
                     changeErrorState= {this.changeErrorState.bind(this)}/>
+                
                 {this.renderCards()}  
               </div>
             </Route>
@@ -98,13 +100,22 @@ class App extends React.Component {
             >
 
             </Route>
-          </Switch>
+            </Switch>
         </React.Fragment>
       </Router>
     )
   }
 }
 
+function Comp1(props){
+  return (
+    <p>comp1</p>
+  )
+}
 
-
+function Comp2(props){
+  return(
+    <p>comp2</p>
+  )
+}
 export default App;
