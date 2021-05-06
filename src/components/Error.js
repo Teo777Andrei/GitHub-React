@@ -8,10 +8,7 @@ function Error({text}) {
         <div className = "card card-body mt-5">
             <div id ="error" className ="text-center">
                 <h5 className ="quicksand">{text} form</h5>
-<<<<<<< HEAD
-                
-=======
->>>>>>> a2ef36f4ba16eb525ae27a92062eed32a0cbe73d
+
             </div>
         </div>
     )
