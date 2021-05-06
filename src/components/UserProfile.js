@@ -44,7 +44,6 @@ export class UserProfile extends Component {
                       followers:responseJson.following ,
                       company: String(responseJson.company),
                       email:String(responseJson.email)  })
-        
     }
 
     render() {
